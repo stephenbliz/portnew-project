@@ -1,0 +1,225 @@
+.formWrapper{
+    display: flex;
+    padding: 5% 10%;
+    justify-content: space-between;
+}
+.descWrp{
+    width: 45%;
+    padding: 5% 0;
+}
+.descWrp> h2{
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.descWrp> p{
+    margin-bottom: 2.5rem;
+    color: gray;
+}
+.address{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.contact{
+    width: 45%;
+}
+.contact> :first-child{
+    color: gray;
+    margin-bottom: 1rem;
+}
+.social> :first-child{
+    color: gray;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.wrp{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.wrp> div{
+    width: fit-content;
+}
+.detailWrp{
+    width: 45%;
+    background-color: var(--litnavyblue);
+}
+.form{
+    padding: 7%;
+    
+}
+.nameWrp{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.name{
+    width: 45%;
+
+}
+label> span{
+    color: var(--orange);
+}
+input, textarea{
+    display: block;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--transgreen);
+    margin-top: .5rem;
+    padding: 1rem;
+    border: none;
+}
+.div{
+    margin-bottom: 2rem;
+}
+.form> :last-child{
+    height: 4rem;
+    padding: 1rem;
+    background-color: var(--lightgreen);
+    color: var(--navyblue);
+    border: none;
+    cursor: pointer;
+}
+.form> :nth-child(3)> textarea{
+    height: 8rem;
+}
+
+/* ...............Live Chat.......... */
+
+.livechatContainer{
+    padding: 5% 10%;
+}
+.livechatWrp{
+    background-color: var(--transgreen);
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+.textWrp{
+    width: 75%;
+}
+.textWrp> h2{
+    margin-bottom: 2rem;
+}
+.textWrp> div{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.textWrp> div> span{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.imageSide{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imageWrp{
+    width: 30%;
+    aspect-ratio: 1/1;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.imageSide> :last-child{
+    color: var(--lightgreen);
+    cursor: pointer;
+}
+.icon{
+    transform: translateY(.4rem);
+}
+
+/* ........Faqs and answers........... */
+
+.faqContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+    margin-bottom: 5%;
+    align-items: flex-start;
+}
+.faqWrp{
+    width: 45%;
+}
+.faq{
+    height: 4rem;
+    border: .1rem solid var(--transgreen);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.faq:hover{
+    background-color: var(--transgreen);
+    color: var(--lightgreen);
+    border: none;
+}
+.title{
+    color: var(--lightgreen);
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+.ansWrp{
+    width: 45%;
+}
+
+/* .................Media Queries............... */
+
+@media screen and (max-width: 890px){
+    .livechatWrp{
+        flex-wrap: wrap;
+    }
+    .textWrp{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .imageSide{
+        width: 100%;
+    }
+    .imageWrp{
+        margin-bottom: 2rem;
+        width: 25%;
+        aspect-ratio: 1/1;
+    }
+}
+
+@media screen and (max-width: 801px){
+    .formWrapper{
+        flex-wrap: wrap;
+    }
+    .descWrp{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .detailWrp{
+        width: 100%;
+    }
+    .faqContainer{
+        flex-wrap: wrap;
+    }
+    .faqWrp{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .ansWrp{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .address{
+        flex-wrap: wrap;
+    }
+    .contact{
+        width: 100%;
+    }
+    .address> :first-child{
+        margin-bottom: 2rem;
+    }
+}

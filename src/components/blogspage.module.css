@@ -1,0 +1,33 @@
+.container> :first-child{
+    margin-bottom: 3rem;
+}
+.navList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5% 10%;
+    font-size: 1.6rem;
+    
+}
+.navList> a{
+    width: fit-content;
+    color: gray;
+    /* color: red; */
+}
+.active{
+    color: var(--lightgreen);
+}
+.blogWrp{
+    padding: 5% 10%;
+}
+.circleButton{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: .1rem solid var(--orange);
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto 10% auto;
+    padding: 4rem 0;
+}

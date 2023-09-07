@@ -1,0 +1,88 @@
+.compsoluton{
+    background-color: var( --darkgreen);
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+}
+.solutionText{
+    width: 45%;
+    padding: 5rem 0;
+
+}
+.solutionText> h2{
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+}
+.solutionText> :nth-child(2){
+    margin-bottom: 2rem;
+}
+.solutionText> div{
+    width: 20%;
+    border: .1rem solid var(--orange);
+    margin-top: 3rem;
+}
+.solutionImage{
+    width: 45%;
+    position: relative;
+}
+.image1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    aspect-ratio: 1/1;
+}
+.image2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    aspect-ratio: 1/1.2;
+}
+
+/* .......Media  Queries........... */
+
+@media screen and (min-width: 1171px){
+    .solutionText{
+        padding: 10rem 0;
+    }
+}
+
+@media screen and (min-width: 1375px){
+    .solutionText{
+        padding: 15rem 0;
+    }
+}
+@media screen and (min-width: 1639px){
+    .solutionText{
+        padding: 20rem 0;
+    
+    }
+}
+@media screen and (max-width: 934px){
+    .solutionText{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 916px){
+    .solutionText{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 801px){
+    .compsoluton{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin-top: 3rem;
+    }
+    .solutionText{
+        width: 100%;
+        padding: 0;
+    
+    }
+    .solutionImage{
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+}

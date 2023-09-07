@@ -1,0 +1,71 @@
+.achievementContainer{
+    padding: 5% 10%;
+}
+.acheiveWrapper{
+    margin-top: 4rem;
+}
+.achievement{
+    border-top: .1rem solid gray;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.achievement> div{
+    width: 10%;
+}
+.achievement> p{
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: gray;
+}
+.achievement> :last-child{
+    color: var(--lightgreen);
+    display: flex;
+    width: 11%;
+    cursor: pointer;
+    gap: .5rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 801px){
+    .achievement{
+        padding: 3rem 0;
+    }
+    .achievement> div{
+        width: 19%;
+    }
+    .achievement> p{
+        width: 45%;
+    }
+    .achievement> :nth-child(3){
+        width: 11%;
+    }
+    .achievement> :last-child{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 548px){
+    .achievement{
+        flex-wrap: wrap;
+    }
+    .achievement> p{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .achievement> :first-child{
+        margin-bottom: 2rem;
+    }
+    .achievement> div{
+        width: 20%;
+    }
+    .achievement> :nth-child(3){
+        width: 48%;
+    }
+    .achievement> :last-child{
+        width: 48%;
+        justify-content: flex-end;
+    }
+}

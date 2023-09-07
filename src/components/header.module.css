@@ -1,0 +1,254 @@
+.container, .miniheader{
+    background-color: var(--darkgreen);
+    height: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid var(--green);
+}
+.mobileview{
+    display: none;
+}
+.menuclose{
+    display: none;
+}
+.logo{
+    width: 20%;
+    text-align: end;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+.logo> a{
+    color: var(--orange);
+}
+
+.logo span{
+    color: var(--lightgreen);
+}
+.nav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+.nav> div{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: var(--gray);
+}
+.active{
+    border-bottom: .1rem solid var(--orange);
+}
+.menuicon{
+    width: 4rem;
+    height: 4rem;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    padding: 2.3rem 0;
+}
+.dropdownContent{
+    position: absolute;
+    display: none;
+    background-color: var(--green);
+    width: 15rem;
+    left: -1rem;
+    top: 6.5rem;
+    padding: 1.5rem;
+    z-index: 99;
+}
+.dropdown:hover .dropdownContent{
+    display: block;
+}
+.dropdownContent li{
+    list-style: none;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.dropdownContent> :first-child{
+    margin-top: .3rem;
+}
+.chat{
+    width: 20%;
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border-left: 0.1rem solid var(--green);
+}
+.chat> :last-child{
+    cursor: pointer;
+}
+.iconWrapper{
+    height: 60%;
+    aspect-ratio: 1/1;
+    background-color: var(--lightgreen);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: .4rem .4rem .9rem var(--darkgreen) inset;
+}
+.iconWrapper .icon{
+    color: var(--darkgreen);
+    transform: scale(1.8);
+    position: absolute;
+    top: 35%;
+    left: 32%;
+}
+
+
+@media screen and (max-width: 801px){
+    .container{
+        height: 8rem;
+        /* display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; */
+    }
+    .dropdown{
+        /* position: relative;
+        display: inline-block;
+        height: 100%; */
+        padding: 3.15rem 0;
+    }
+    .nav{
+        width: 60%;
+        gap: 2rem;
+    }
+    .chat{
+        width: 22%;
+        padding-left: 1rem;
+    }
+    .logo{
+        width: 18%;
+    }
+    .dropdownContent{
+        width: 14rem;
+        left: -1.5rem;
+        padding: 1.5rem;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        /* height: 6.5rem; */
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav{
+        width: 80%;
+        gap: 2rem;
+    }
+    .chat{
+        width: 100%;
+        padding-left: 1rem;
+        background-color: var(--darkgreen);
+        padding: 0 39%;
+    }   
+    .logo{
+        width: 20%;
+    }
+    .dropdownContent{
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 532px){
+    .nav{
+        width: 77%;
+        gap: 1rem;
+    }
+    .chat{
+        width: 100%;
+        padding-left: 1rem;
+        background-color: var(--darkgreen);
+        padding: 0 35%;
+    }   
+    .logo{
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .container{
+        display: none;
+        position: absolute;
+        margin-left: 0;
+        flex-direction: column;
+        gap: 4rem;
+        height: auto;
+        width: 70%;
+        padding: 2rem;
+        align-items: flex-start;
+        z-index: 99;
+    }
+    .mobileview{
+        display: flex;
+        padding: 0 2rem;
+    }
+    .nav{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+    .chat{
+        width: 100%;
+        height: 7rem;
+        background-color: var(--darkgreen);
+        padding: 0 0 0 2rem;
+    }   
+    .dropdown{
+        height: fit-content;
+        padding: 0;
+    }
+    .logo{
+        width: 100%;
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menuclose{
+        display: block;
+    }
+    .dropdownContent{
+        left: 7rem;
+        top: -2rem;
+        border-radius: .5rem;
+    }
+}
+
+@media screen and (max-width: 355px){
+    .container{
+        width: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 325px){
+    .container{
+        width: 90%;
+        
+    }
+}
+
+@media screen and (max-width: 270px){
+    .container{
+        width: 100%;
+    }
+    .dropdownContent{
+        width: 10rem;
+        padding: 1rem;
+    }
+}
+

@@ -1,0 +1,38 @@
+.customersay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+}
+.testiWrapper{
+    width: 70%;
+    text-align: center;
+}
+.headtitle{
+    color: var(--lightgreen);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+.headtitle> span{
+    font-size: 3rem;
+    color: var(--gray);
+    display: block;
+    margin-top: 2rem;
+}
+.testiWrapper> p{
+    margin-bottom: 3rem;
+}
+
+.pphoto{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 481px){
+    .customersay{
+        padding: 5% 5%;
+    }
+}

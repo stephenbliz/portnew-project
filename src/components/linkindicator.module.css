@@ -1,0 +1,32 @@
+.container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 5% 2% ;
+    aspect-ratio: 1/0.15;
+    background-image: url('../assets/wallpaper1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--shadowblue1);
+}
+.container> div{
+    position: relative;
+}
+.linkHolder{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.container> :last-child{
+    font-size: 3.5rem;
+}

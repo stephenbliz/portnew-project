@@ -1,0 +1,126 @@
+.connImageWrapper{
+    width: 100%;
+    aspect-ratio: 1/0.5;
+    background-image: url(../assets/typing.jpg);
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 15% 0;
+}
+.connImageWrapper::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--transgray2), var(--transgray2));
+}
+.onConnImage{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.onConnImage> :first-child{
+    width: 40%;
+    position: relative;
+}
+.onConnImage> :first-child> h2, p{
+    margin-bottom: 3rem;
+}
+.circle{
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: .1rem solid var(--orange);
+}
+.circle> div{
+    width: 50%;
+}
+.circle> div> span{
+    display: block;
+}
+.circle> :last-child{
+    transform: scale(1.5);
+}
+.onConnImage> :last-child{
+    width: 45%;
+    aspect-ratio: 1/0.6;
+    position: relative;
+}
+.videoImage{
+    width: 100%;
+    height: 100%;
+}
+.outercircle{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--darkgreen);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    padding: .75rem 0;
+    cursor: pointer;
+}
+.innercircle{
+    margin: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--lightgreen);
+}
+.innercircle> :first-child{
+    color: var(--darkgreen);
+}
+
+/* ..........Media Queries.......... */
+
+@media screen and (min-width: 1375px){
+    .onConnImage> :last-child{
+        margin: auto 0;
+    }
+    .onConnImage> :first-child{
+        width: 40%;
+        margin: auto 0;
+    }
+    
+}
+
+@media screen and (max-width: 916px){
+    .connImageWrapper{
+        background-position: center;
+        background-size: center;
+    }
+    .onConnImage> :last-child{
+        width: 45%;
+        aspect-ratio: 1/0.6;
+        margin: auto 0;
+    }
+    .onConnImage> :first-child{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .onConnImage{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .onConnImage> :first-child{
+        width: 100%;
+    }
+    .onConnImage> :last-child{
+        width: 100%;
+    }
+}

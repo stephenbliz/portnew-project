@@ -1,0 +1,44 @@
+.connNumber{
+    padding: 5rem 10% 0 10%;
+    display: flex;
+}
+.numberwrapper{
+    width: 25%;
+    padding: 0 5%;
+    border-right: .1rem solid var(--gray);
+}
+.connNumber> :last-child{
+    border: none;
+}
+.numberwrapper> :nth-child(2){
+    border: .1rem solid var(--orange);
+    margin: 1rem 0;
+}
+.numberwrapper> :last-child{
+    text-transform: capitalize;
+}
+.number{
+    color: var(--darkgreen);
+    font-size: 7rem;
+    text-shadow: .1rem 0 var(--lightgreen),
+                0 .1rem var(--lightgreen),
+                -.1rem 0 var(--lightgreen),
+                0 -.1rem var(--lightgreen);
+}
+
+
+@media screen and (max-width: 701px){
+    .connNumber{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .numberwrapper{
+        width: 50%;
+        text-align: center;
+        padding: 0 10%;
+        margin-bottom: 3rem;
+    }
+    .connNumber> :nth-child(2){
+        border: none;
+    }
+}

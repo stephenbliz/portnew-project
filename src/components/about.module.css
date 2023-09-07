@@ -1,0 +1,156 @@
+/* .............Skills.............. */
+
+.aboutSkillWrapper{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.skillName{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.skillName> h2{
+    width: 100%;
+}
+.skillName> div{
+    width: 100%;
+    display: flex;
+    color: var(--lightgreen);
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+}
+.skillName> div> div{
+    width: fit-content;
+}
+.skillName> div> :nth-child(2){
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: var(--lightgreen);
+}
+.skillDescWrp{
+    padding-top: 2rem;
+    width: 80%;
+}
+.skillDescWrp> :first-child{
+    border: .1rem solid var(--lightgreen);
+    margin-bottom: 5rem;
+}
+
+/* ..................Value............... */
+
+.circleWrapper{
+    position: relative;
+}
+.circle{
+    width: 34.5%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border: .1rem solid var(--gray);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 15% 0;
+    top: 0;
+}
+.circle1{
+    left: 0;
+}
+.circle2{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle3{
+    right: 0;
+}
+.valueWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+}
+.value{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.value> div{
+    width: 25%;
+    font-size: 1rem;
+    color: var(--lightgreen);
+}
+.value> div> span{
+    display: block;
+    margin-top: .5rem;
+    color: var(--gray);
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    text-transform: capitalize;
+}
+.value> p{
+    width: 65%;
+    padding-top: 1.5rem;
+}
+.profteam{
+    padding: 5% 10%;
+}
+
+/* ...............Media Queries............... */
+
+@media screen and (max-width: 801px){
+    .aboutSkillWrapper{
+        flex-wrap: wrap;
+    }
+    .skillName{
+        width: 100%;
+    }
+    .skillDescWrp{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 686px){
+    .value> div> span{
+        font-size: 1.6rem;
+    }
+    .circle{
+        font-size: 1.6rem;
+        padding: 15% 0;
+    }
+}
+
+@media screen and (max-width: 501px){
+    .valueWrapper{
+        margin-top: 60%;
+    }
+    .circle{
+        font-size: 1.4rem;
+        padding: 15% 0;
+        word-wrap: break-word;
+    }
+    .value> div> span{
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .valueWrapper{
+        margin-top: 70%;
+    }
+    
+}
+@media screen and (max-width: 290px){
+    .valueWrapper{
+        margin-top: 80%;
+    }
+    .circle{
+        font-size: 1rem;
+        /* padding: 15% 0;
+        word-wrap: break-word; */
+    }
+}

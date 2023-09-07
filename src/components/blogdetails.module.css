@@ -1,0 +1,79 @@
+.container> :first-child{
+    padding: 10% 10% 2% 10%;
+}
+.dateWrp{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 0 10%;
+}
+.citation{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--green);
+    margin: 5% 0 5% 15% ;
+    padding:0 3% 3% 0;
+}
+.iconWrp{
+    text-align: right;
+    width: 25%;
+    aspect-ratio: 1/1;
+}
+.iconWrp> :first-child{
+    width: 50%;
+    height: 50%;
+    color: var(--lightgreen);
+}
+.textWrp{
+    padding-top: 5rem;
+    width: 75%;
+}
+.textWrp> :nth-child(2){
+    width: 3rem;
+    border: .1rem solid var(--lightgreen);
+    margin-bottom: 2rem;
+}
+.line{
+    border: .1rem solid var(--lightgreen);
+    margin: 5%;
+}
+.socialWrp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2% 10%;
+}
+.socialWrp> div{
+    width: fit-content;
+}
+.similarBlogWrp{
+    padding: 5% 10%;
+}
+
+@media screen and (max-width: 801px){
+    .citation{
+        width: 90%;
+        align-items: flex-start;
+        background-color: var(--green);
+        margin: 5%;
+        padding: 5% 3% 3% 0;
+    }
+    .iconWrp{
+        width: 15%;
+        aspect-ratio: 1/1;
+    }
+    .iconWrp> :first-child{
+        width: 50%;
+        height: 50%;
+        color: var(--lightgreen);
+    }
+    .textWrp{
+        padding-top: 0;
+        width: 83%;
+    }
+    .dateWrp{
+        margin-top: 3rem;
+    }
+}

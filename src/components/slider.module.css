@@ -1,0 +1,62 @@
+
+.sliderContainer{
+    width: 100%;
+    position: relative;
+    height: 5rem;
+    overflow-x: hidden;
+    background-color: var(--transgreen);
+    
+}
+.sliders{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+}
+.slider1{
+    left: -90%;
+    animation: slide1 20s both infinite linear;
+}
+.slider2{
+    animation: slide1 20s both infinite linear;
+    right: 0;
+}
+.sliders> div{
+    width: fit-content;
+    font-size: 2rem;
+}
+
+
+@keyframes slide1{
+    from{
+        transform: translateX(105%);
+    }
+    to{
+        transform: translateX(-5%);
+    }
+}
+
+@media screen and (max-width: 916px){
+    .sliders> :last-child{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 701px){
+    .sliders> :nth-child(3){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .sliders> :nth-child(2){
+        display: none;
+    }
+    .sliders{
+        justify-content: space-evenly;
+    }
+}
+

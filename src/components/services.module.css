@@ -1,0 +1,166 @@
+.workingProcess{
+    padding: 5% 10%;
+}
+.processContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100;
+    aspect-ratio: 1/0.4;
+}
+.processContainer> :nth-child(2){
+    align-self: center;
+}
+.processContainer> :last-child{
+    align-self: center;
+}
+.processWrapper{
+    width: 23%;
+}
+.processWrapper> :first-child{
+    margin-bottom: 1rem;
+}
+.processIconWrp{
+    font-size: 5rem;
+    font-weight: 900;
+}
+.processWrapper> :first-child> :first-child{
+    width: 25%;
+    height: 50%;
+    color: var(--litnavyblue);
+    text-shadow: 1rem 1rem var(--lightgreen2);
+}
+.processWrapper> :first-child> :last-child{
+    width: 25%;
+    height: 50%;
+    color: var(--litnavyblue);
+    text-shadow: 1rem 1rem var(--lightgreen2);
+}
+.process> div{
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+.process> div> span{
+    color: var(--lightgreen);
+}
+
+/* ...........Works................ */
+
+.workContainer{
+    padding: 2% 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.workWrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+.workContainer> :nth-child(2){
+    flex-direction: row-reverse;
+}
+.workContainer> :last-child{
+    flex-direction: row-reverse;
+}
+.workWrapper> :first-child{
+    position: absolute;
+    color: var(--lightgreen);
+    font-size: 4rem;
+    font-weight: 800;
+    top: 1rem;
+    right: 20%;
+}
+.imageWrapper{
+    width: 45%;
+    aspect-ratio: 1/1.1;
+}
+.workImage{
+    width: 80%;
+    height: 100%;
+}
+.workTextWrapper{
+    width: 45%;
+    padding-top: 8%;
+}
+.workTextWrapper> :last-child{
+    display: block;
+    align-items: center;
+    margin-top: 5rem;
+    cursor: pointer;
+    color: var(--lightgreen);
+}
+a> :first-child> :first-child{
+    transform: scale(1.5) translateY(.2rem);
+}
+.workListWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.workListWrapper> ul{
+    width: 45%;
+    list-style: none;
+}
+
+/* .........Media Queries.......... */
+
+@media screen and (max-width: 1059px){
+    .workWrapper{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+    }
+    .imageWrapper{
+        width: 70%;
+        margin-left: 30%;
+    }
+    .workImage{
+        width: 100%;
+    }
+    .workTextWrapper{
+        width: 80%;
+    }
+    .workWrapper> :first-child{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 801px){
+    .processContainer{
+        flex-wrap: wrap;
+    }
+    .processWrapper{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 558px){
+    .imageWrapper{
+        width: 100%;
+        margin-left: 0;
+    }
+    .workTextWrapper{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .processWrapper{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 445px){
+    .workListWrapper{
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .workListWrapper> ul{
+        width: 100%;
+    }
+    .workContainer> :nth-child(3)> :first-child{
+        word-break: break-all;
+    }
+}
