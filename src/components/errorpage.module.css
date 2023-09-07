@@ -1,12 +1,12 @@
 .container{
-    margin: 0 auto 5% auto;
-    width: 40%;
+    padding: 0 10% 5% 10%;
     height: fit-content;
     text-align: center;
 }
 .num{
     font-size: 18rem;
     font-weight: 900;
+    margin-bottom: 3rem;
     color: var(--navyblue);
     text-shadow: -.1rem 0 var(--lightgreen),
                 0 -.1rem var(--lightgreen),
@@ -35,19 +35,15 @@
         padding: 8% 10% 5% 10%;
     }
     .num{
-        font-size: 18rem;
-        font-weight: 900;
-        color: var(--navyblue);
-        text-shadow: -.1rem 0 var(--lightgreen),
-                    0 -.1rem var(--lightgreen),
-                    .1rem 0 var(--lightgreen),
-                    0 .1rem var(--lightgreen);
+        font-size: 12rem;
+        /* margin-bottom: 3rem; */
+        
     }
 }
 
-@media screen and (max-width: 447px){
+@media screen and (max-width: 481px){
     .num{
-        font-size: 12rem;
+        font-size: 8rem;
     }
     .container> :nth-child(2){
         font-size: 2rem;
@@ -56,7 +52,7 @@
 
 @media screen and (max-width: 290px){
     .num{
-        font-size: 9rem;
+        font-size: 6rem;
     }
     .container> :nth-child(2){
         font-size: 2rem;
