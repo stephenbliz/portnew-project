@@ -15,6 +15,9 @@
     border-top: .2rem solid var(--green);
     box-shadow: .2rem .2rem 1rem var(--shadowblue);
 }
+.blogWrapper> :nth-child(2):hover + .blogDesWrapper{
+    background-color: var(--transgreen);
+}
 .recentBlogContainer> :nth-child(2){
     align-self: center;
 }

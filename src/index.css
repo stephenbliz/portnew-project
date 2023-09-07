@@ -67,15 +67,6 @@ h2{
   box-shadow: .6rem .6rem 1.5rem var(--shadowblue) inset;
 }
 
-.button:hover + .product1{
-  background-color: var(--green);
-}
-.button:hover + .product1> :first-child{
-  background-color: var(--navyblue);
-}
-.button:hover + .blogDesWrapper{
-  background-color: var(--transgreen);
-}
 .headtitle{
   color: var(--lightgreen);
   font-size: 1.4rem;

@@ -117,6 +117,12 @@
 .productWrapper{
     position: relative;
 }
+.productWrapper> :first-child:hover + .product{
+    background-color: var(--green);
+}
+.productWrapper> :first-child:hover + .product> :first-child{
+    background-color: var(--navyblue);
+}
 .product{
     display: flex;
     justify-content: space-between;
