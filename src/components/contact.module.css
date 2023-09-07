@@ -148,7 +148,7 @@ input, textarea{
     width: 45%;
 }
 .faq{
-    height: 4rem;
+    height: fit-content;
     border: .1rem solid var(--transgreen);
     padding: 1.25rem;
     margin-bottom: 1.5rem;
