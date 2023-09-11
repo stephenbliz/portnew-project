@@ -4,6 +4,8 @@ import {HiOutlineMenu} from 'react-icons/hi'
 import {AiOutlineClose} from 'react-icons/ai'
 import css from './header.module.css'
 import { NavLink, Link } from 'react-router-dom'
+import {animated, useSpring} from '@react-spring/web'
+import { useInView } from 'react-intersection-observer'
 
 const Header = () => {
     const mobileheader = useRef();
@@ -24,6 +26,30 @@ const Header = () => {
         }
             
     }
+
+    const [refHeader, inViewHeader] = useInView({
+        triggerOnce: true,
+        threshold: 0
+    })
+
+    const [refHeader2, inViewHeader2] = useInView({
+        triggerOnce: true,
+        threshold: 0
+    })
+
+    const springHeader = useSpring({
+        from: {opacity: inViewHeader && '0', translateY: inViewHeader && '50px'},
+        to: {opacity: '1', translateY: '0'},
+        config: {duration: 1000},
+        delay: 300
+    })
+
+    const springHeader2 = useSpring({
+        from: {opacity: inViewHeader2 && '0', translateY: inViewHeader2 && '30px'},
+        to: {opacity: '1', translateY: '0'},
+        config: {duration: 1000},
+    })
+
     return ( 
         <>
             <section ref={mobileheader} className={[css.miniheader, css.mobileview].join(' ')}>
@@ -33,30 +59,30 @@ const Header = () => {
                 <HiOutlineMenu className={css.menuicon} onClick={handleMenuOpen}/>
             </section>
             <header ref={desktopheader} className={css.container}>
-                <div className={css.logo}>
+                <animated.div style={springHeader2} ref={refHeader2} className={css.logo}>
                     <Link to='/'><div>Port<span>new.</span></div></Link>
                     <AiOutlineClose className={css.menuclose} onClick={handleMenuClose}/>
-                </div>
+                </animated.div>
                 <nav className={css.nav}>
-                    <div><NavLink to='/' onClick={handleMenuClose}>Home</NavLink></div>
-                    <div className={css.dropdown}>
+                    <animated.div style={springHeader} ref={refHeader}><NavLink to='/' onClick={handleMenuClose}>Home</NavLink></animated.div>
+                    <animated.div style={springHeader} ref={refHeader} className={css.dropdown}>
                         Service<span>+</span>
 
                         <ul className={css.dropdownContent}>
                             <li><NavLink to='service' onClick={handleMenuClose}>Services</NavLink></li>
                             <li><NavLink to='servicedetails' onClick={handleMenuClose}>Services Details</NavLink></li>
                         </ul>
-                    </div>
-                    <div className={css.dropdown}>
+                    </animated.div>
+                    <animated.div style={springHeader} ref={refHeader} className={css.dropdown}>
                         Portfolio<span>+</span>
 
                         <ul className={css.dropdownContent}>
                             <li><NavLink to='portfolio' onClick={handleMenuClose}>Portfolio</NavLink></li>
                             <li><NavLink to='portfoliodetails' onClick={handleMenuClose}>Portfolio Details</NavLink></li>
                         </ul>
-                    </div>
-                    <div><NavLink to='about' onClick={handleMenuClose}>About</NavLink></div>
-                    <div className={css.dropdown}>
+                    </animated.div>
+                    <animated.div style={springHeader} ref={refHeader}><NavLink to='about' onClick={handleMenuClose}>About</NavLink></animated.div>
+                    <animated.div style={springHeader} ref={refHeader} className={css.dropdown}>
                         Pages<span>+</span>
 
                         <ul className={css.dropdownContent}>
@@ -66,15 +92,15 @@ const Header = () => {
                             <li><NavLink to='blogdetails' onClick={handleMenuClose}>Blog Details</NavLink></li>
                             <li><NavLink to='404' onClick={handleMenuClose}>404</NavLink></li>
                         </ul>
-                    </div>
-                    <div><NavLink to='contact' onClick={handleMenuClose}>Contact</NavLink></div>
+                    </animated.div>
+                    <animated.div style={springHeader} ref={refHeader}><NavLink to='contact' onClick={handleMenuClose}>Contact</NavLink></animated.div>
                 </nav>
-                    <div className={css.chat}>
+                    <animated.div style={springHeader2} ref={refHeader2} className={css.chat}>
                         <div className={css.iconWrapper}>
                             <AiOutlineWechat className={css.icon}/>
                         </div>
                         <div><NavLink to='/contact' onClick={handleMenuClose}>Let's chat</NavLink></div>
-                    </div>
+                    </animated.div>
             </header>
             
         </>

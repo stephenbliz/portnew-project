@@ -11,6 +11,8 @@ import theme7 from '../assets/theme7.jpg';
 import theme8 from '../assets/theme8.jpg';
 import theme9 from '../assets/theme9.jpg';
 import RecentWorks from './RecentWorks';
+import useAnimate from './useAnimate';
+import { animated } from '@react-spring/web';
 
 const Portfolio = () => {
     const image1 = {
@@ -41,29 +43,42 @@ const Portfolio = () => {
         backgroundImage: `url(${theme9})`
     }
 
+    const {
+        ref, 
+        ref2,
+        ref1,
+        refSpring1,
+        refImage,
+        spring1,
+        springAnimated,
+        springImage,
+        springAnimated1,
+        springAnimated2
+    } = useAnimate()
+
     return (
         <section className={css.portfolioContainer}>
             <LinkIndicator text1={'Home'} text2={'Portfolio'}/>
             <section className={css.gameContainer}>
-                <div className={css.gameImageWrp}>
+                <animated.div style={springImage} ref={refImage} className={css.gameImageWrp}>
                     <img src={footerIm} alt="" className={css.gameImage} />
-                </div>
+                </animated.div>
                 <div className={css.gameTextWrp}>
                     <div></div>
-                    <div>
+                    <animated.div style={springAnimated} ref={ref}>
                         Project CRM by brain <span>communication</span>
-                    </div>
-                    <h2>Game Design</h2>
-                    <p>
+                    </animated.div>
+                    <animated.h2 style={springAnimated1} ref={ref1}>Game Design</animated.h2>
+                    <animated.p style={springAnimated2} ref={ref2}>
                         Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Quisquam eos labore nihil expedita ipsum id sit officia est. 
                         Nam numquam rerum error voluptates id praesentium, et corrupti.
-                    </p>
-                    <p>
+                    </animated.p>
+                    <animated.p style={spring1} ref={refSpring1}>
                         Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Quisquam eos labore nihil expedita ipsum id
-                    </p>
-                    <div></div>
+                    </animated.p>
+                    <animated.div style={springAnimated2} ref={ref2}></animated.div>
                 </div>
             </section>
             <section className={css.portfolioWorkContainer}>

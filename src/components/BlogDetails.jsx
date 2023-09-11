@@ -10,33 +10,78 @@ import image4 from '../assets/service22.jpg';
 import image5 from '../assets/service222.jpg';
 import image6 from '../assets/service2222.jpg';
 import RecentBlogs from './RecentBlogs';
+import useAnimate from './useAnimate';
+import { animated } from '@react-spring/web';
 
 const BlogDetails = () => {
     const paragraph =  "Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci deserunt eos eligendi. Possimus facilis eveniet corrupti fugaquisquam dolorem odio? Asperiores veritatis earum minima nobis Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci deserunt eos eligendi. Possimus facilis eveniet corrupti fuga quisquam dolorem odio? Asperiores veritatis earum minima nobis";
 
+    const {
+        ref,
+        reff,
+        ref1,
+        ref11,
+        ref2,
+        ref22,
+        ref3,
+        ref33,
+        ref4,
+        ref44,
+        ref5,
+        ref55,
+        ref6,
+        ref7,
+        ref8,
+        refSpring,
+        refSpring1,
+        refImage,
+        refImage1,
+        refImage2,
+        springImage,
+        springImage1,
+        springImage2,
+        spring,
+        spring1,
+        springAnimated,
+        springAnimated1,
+        springAnimated2,
+        springAnimated3,
+        springAnimated4,
+        springAnimated5,
+        springAnimatedd,
+        springAnimated11,
+        springAnimated22,
+        springAnimated33,
+        springAnimated44,
+        springAnimated55,
+        springAnimated6,
+        springAnimated7,
+        springAnimated8,
+    } = useAnimate();
+
 
     return (
         <section className={css.container}>
-            <h2>Design Thinking A Methodology for UX Design  </h2>
-            <div className={css.dateWrp}>
+            <animated.h2 style={spring1} ref={refSpring1}>Design Thinking A Methodology for UX Design  </animated.h2>
+            <animated.div style={spring} ref={refSpring} className={css.dateWrp}>
                 <div>January 22, 2023</div>
                 <div>Admin</div>
-            </div>
+            </animated.div>
             <section className='portfoliodetWrapper'>
-                <div className='portImaWrp'>
+                <animated.div style={springImage} ref={refImage} className='portImaWrp'>
                     <img src={image2} alt="" className='portImage' />
-                </div>
-                <p>
+                </animated.div>
+                <animated.p style={springAnimated} ref={ref}>
                     {paragraph}
-                </p>
-                <p>
+                </animated.p>
+                <animated.p style={springAnimated1} ref={ref1}>
                     {paragraph}
-                </p>
-                <h2>What is Structuring the Site</h2>
-                <p>
+                </animated.p>
+                <animated.h2 style={springAnimated3} ref={ref3}>What is Structuring the Site</animated.h2>
+                <animated.p style={springAnimated4} ref={ref4}>
                     {paragraph}
-                </p>
-                <div className={css.citation}>
+                </animated.p>
+                <animated.div style={springAnimated5} ref={ref5} className={css.citation}>
                     <div className={css.iconWrp}>
                        <BiSolidQuoteLeft />
                     </div>
@@ -45,41 +90,41 @@ const BlogDetails = () => {
                         <div></div>
                         <p>{paragraph}</p>
                     </div>
-                </div>
-                <p>
+                </animated.div>
+                <animated.p style={springAnimated2} ref={ref2}>
                     {paragraph}
-                </p>
-                <p>
+                </animated.p>
+                <animated.p style={springAnimated2} ref={ref2}>
                     {paragraph}
-                </p>
-                <div className='portImaWrp'>
+                </animated.p>
+                <animated.div style={springImage1} ref={refImage1} className='portImaWrp'>
                     <img src={image1} alt="" className='portImage1' />
                     <img src={image4} alt="" className='portImage1' />
-                </div>
-                <h2>How to Make Design System</h2>
-                <p>
+                </animated.div>
+                <animated.h2 style={springAnimatedd} ref={reff}>How to Make Design System</animated.h2>
+                <animated.p style={springAnimated11} ref={ref11}>
                     {paragraph}
-                </p>
-                <p>
+                </animated.p>
+                <animated.p style={springAnimated22} ref={ref22}>
                     {paragraph}
-                </p>
-                <h2>A Example of Good UX Design</h2>
-                <p>
+                </animated.p>
+                <animated.h2 style={springAnimated33} ref={ref33}>A Example of Good UX Design</animated.h2>
+                <animated.p style={springAnimated44} ref={ref44}>
                     {paragraph}
-                </p>
-                <p>
+                </animated.p>
+                <animated.p style={springAnimated55} ref={ref55}>
                     {paragraph}
-                </p>
-                <div className='portImaWrp'>
+                </animated.p>
+                <animated.div style={springImage2} ref={refImage2} className='portImaWrp'>
                     <img src={image5} alt="" className='portImage' />
-                </div>
-                <h2>The Definition of User Experience</h2>
-                <p>
+                </animated.div>
+                <animated.h2 style={springAnimated6} ref={ref6}>The Definition of User Experience</animated.h2>
+                <animated.p style={springAnimated7} ref={ref7}>
                     {paragraph}
-                </p>
-                <p>
+                </animated.p>
+                <animated.p style={springAnimated8} ref={ref8}>
                     {paragraph}
-                </p>
+                </animated.p>
                 <div className={css.line}></div>
                 <div className={css.socialWrp}>
                     <div>Social share:</div>

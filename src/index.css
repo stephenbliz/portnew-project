@@ -50,13 +50,14 @@ h2{
   border-top: .2rem solid var(--green);
   border-left: .2rem solid var(--green);
   padding: .5rem;
-  transition: .5s;
+  transition: .5s ease-in-out;
 }
 .button :first-child{
   width: 2.5rem;
   height: 2rem;
 }
 .button:hover{
+  transform: translateY(-5px) rotate(45deg);
   cursor: pointer;
   color: var(--navyblue);
   border-top: 0 solid var(--green);

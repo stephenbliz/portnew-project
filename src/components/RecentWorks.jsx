@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom'
 import {BsArrowUpRight} from 'react-icons/bs';
 import css from './recentworks.module.css';
+import {useSprings, animated} from '@react-spring/web'
 
 const RecentWorks = ({image1, image2, image3, name1, name2, name3, category1, category2, category3}) => {
 
@@ -10,8 +11,47 @@ const RecentWorks = ({image1, image2, image3, name1, name2, name3, category1, ca
         {image: image3, name: name3, category: category3, id: 3}
     ]
 
+    // const worked = works.map((work)=>(
+    //     <div className={css.recentImageWrapper} key={work.id}>
+    //                 <div className={css.recentImage} style={work.image}>
+    //                     <div>Award winning project</div>
+    //                     <Link to='/portfoliodetails'>
+    //                     <div>
+    //                         <BsArrowUpRight className={css.icon}/>
+    //                     </div>
+    //                     </Link>
+    //                 </div>
+    //                 <p>
+    //                     {work.name} <span>{work.category}</span>
+    //                 </p>
+    //             </div>
+    // ))
+
+    // const animationData = [
+    //     {
+    //         from: {opacity: '0', translateY: '100px'},
+    //         to: {opacity: '1', translateY: '0' },
+    //         config: {duration: 1000}
+    //     },
+    //     {
+    //         from: {opacity: '0', translateY: '100px'},
+    //         to: {opacity: '1', translateY: '0'},
+    //         config: {duration: 1000},
+    //         delay: 300
+    //     },
+    //     {
+    //         from: {opacity: '0', translateY: '100px'},
+    //         to: {opacity: '1', translateY: '0'},
+    //         config: {duration: 1000}, 
+    //         delay: 600
+    //     }
+    // ]
+
+    // const workSpring = useSprings(animationData.length, animationData)
+
     return (
             <div className={css.recentImageContainer}>
+                
                 {works.map((work)=>(
                     <div className={css.recentImageWrapper} key={work.id}>
                     <div className={css.recentImage} style={work.image}>

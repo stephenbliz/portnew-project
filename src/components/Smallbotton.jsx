@@ -2,7 +2,6 @@ import {BsArrowUpRight} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const Smallbotton = ({extraStyle, arrow, link}) => {
-    
 
     return (
         <Link to={link}>

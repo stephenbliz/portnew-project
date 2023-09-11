@@ -7,6 +7,8 @@ import typing from '../assets/typing.jpg';
 import service1 from '../assets/service1.jpg';
 import service2 from '../assets/service2.jpg';
 import {BsStars} from 'react-icons/bs';
+import useAnimate from './useAnimate';
+import { animated } from '@react-spring/web';
 
 
 const ServiceDetails = () => {
@@ -26,18 +28,29 @@ const ServiceDetails = () => {
             features: ['context', 'Wireframe', 'Test', 'Prototype'], id: 4 }
     ]
 
+    const {
+        ref,
+        ref1,
+        ref2,
+        refImage,
+        springAnimated,
+        springAnimated1,
+        springAnimated2,
+        springImage
+    } = useAnimate()
+
     
     return (
         <section className={css.servicedetContainer}>
-            <LinkIndicator text1={'Home'} text2={'Services'}/>
+            <LinkIndicator text1={'Home'} text2={'Service Details'}/>
             <section className={css.fromideaContainer}>
                 <div className={css.fromideaTextWrapper}>
-                    <h2>
+                    <animated.h2 style={springAnimated} ref={ref}>
                         From ideation to graphic design, UX/UI design is
                         the historical displine.
-                    </h2>
-                    <div className={css.ideaWrapper}>
-                        <div className={css.idea}>
+                    </animated.h2>
+                    <div  className={css.ideaWrapper}>
+                        <animated.div style={springAnimated1} ref={ref1} className={css.idea}>
                             <div>
                                 <div className={css.green}></div>
                                 <div>UX Design</div>
@@ -57,9 +70,9 @@ const ServiceDetails = () => {
                                 <div className={css.green}></div>
                                 <div>Illustration</div>
                             </div>
-                        </div>
+                        </animated.div>
 
-                        <div className={css.idea}>
+                        <animated.div style={springAnimated2} ref={ref2} className={css.idea}>
                             <div>
                                 <div className={css.orange}></div>
                                 <div>UX Design</div>
@@ -79,13 +92,13 @@ const ServiceDetails = () => {
                                 <div className={css.orange}></div>
                                 <div>Illustration</div>
                             </div>
-                        </div>
+                        </animated.div>
                     </div>
                 </div>
 
-                <div className={css.fromideaImageWrapper}>
+                <animated.div style={springImage} ref={refImage} className={css.fromideaImageWrapper}>
                     <img src={groupImage} alt="" className={css.fromideaImage} />
-                </div>
+                </animated.div>
             </section>
             <Slider text={"User Research"} icon={<BsStars className={css.stars}/>}/>
             <section className={css.servicedetailWrapper}>

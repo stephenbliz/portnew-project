@@ -7,6 +7,8 @@ import gameImage from '../assets/game.jpg';
 import illustrationImage from '../assets/illustration.jpg';
 import uiImage from '../assets/ui.jpg';
 import uxImage from '../assets/ux.jpg';
+import useAnimate from "./useAnimate";
+import { animated } from "@react-spring/web";
 
 const Services = () => {
     const processes = [
@@ -30,14 +32,21 @@ const Services = () => {
         {name: '04 / Game Design', image: gameImage, para: 'Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci deserunt eos eligendi. Possimus facilis eveniet corrupti fuga quisquam dolorem odio? Asperiores veritatis earum minima nobis accusamus fuga dignissimos reiciendis ex.',
                 list: ['Design sweet lorem ipsum', 'Design sweet lorem ipsum', 'Design sweet lorem ipsum', 'Design sweet lorem ipsum', 'Design sweet lorem ipsum', 'Design sweet lorem ipsum', 'Design sweet lorem ipsum'], id: 4 }
     ]
+    const {
+        ref,
+        ref1,
+        springAnimated,
+        springAnimated1
+    } = useAnimate()
+
     return (
         <section className={css.servicesContainer}>
             <LinkIndicator text1={'Home'} text2={'Services'}/>
 
             <section className={css.workingProcess}>
-                <div className="headtitle">
-                    Process <span>Our Working Process</span>
-                </div>
+                <animated.div style={springAnimated} ref={ref} className="headtitle">
+                    Process <animated.span style={springAnimated1} ref={ref1}>Our Working Process</animated.span>
+                </animated.div>
                 <div className={css.processContainer}>
                     {processes.map((process)=>(
                         <div className={css.processWrapper} key={process.id}>

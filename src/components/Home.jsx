@@ -32,8 +32,11 @@ import CompleteSolu from './CompleteSolu';
 import Numbers from './Numbers';
 import CustomerSay from './CustomerSay';
 import Achievement from './Achievement';
+import {animated} from '@react-spring/web'
+import useAnimate from './useAnimate';
+// import {useInView} from 'react-intersection-observer'
 
-const Home = ({handleTop}) => {
+const Home = () => {
     const image1 = {
         backgroundImage: `url(${theme1})`
       }
@@ -43,10 +46,54 @@ const Home = ({handleTop}) => {
       const image3 = {
         backgroundImage: `url(${theme3})`
       }
+
+      const {
+        ref,
+        reff,
+        ref1,
+        ref11,
+        ref2,
+        ref22,
+        ref3,
+        ref33,
+        ref4,
+        ref44,
+        ref5,
+        ref55,
+        ref6,
+        ref7,
+        ref8,
+        refSpring,
+        refSpring1,
+        refImage,
+        refImage1,
+        refImage2,
+        springImage,
+        springImage1,
+        springImage2,
+        spring,
+        spring1,
+        springAnimated,
+        springAnimated1,
+        springAnimated2,
+        springAnimated3,
+        springAnimated4,
+        springAnimated5,
+        springAnimatedd,
+        springAnimated11,
+        springAnimated22,
+        springAnimated33,
+        springAnimated44,
+        springAnimated55,
+        springAnimated6,
+        springAnimated7,
+        springAnimated8,
+    } = useAnimate();
+
     return (
         <>
         <section className={css.digi}>
-            <div className={css.digiImageWrapper}>
+            <animated.div style={springImage} ref={refImage} className={css.digiImageWrapper}>
                 <img src={digiImage1} alt="Photo of a lady working with a computer" className={css.digiImage1} />
                 <img src={digiImage2} alt="Photo of two ladies working with a computer" className={css.digiImage2} />
                 <div className={[css.digiSnippet, css.interface].join(' ')}>
@@ -58,17 +105,17 @@ const Home = ({handleTop}) => {
                 <div className={[css.digiSnippet, css.search].join(' ')}>
                     <IoMdCheckmarkCircleOutline /> <span>Search engine optimization (SEO)</span>
                 </div>
-            </div>
+            </animated.div>
             <div className={css.digiTextWrapper}>
-                <h1 className={css.title}>
-                    Digital <span>growth</span> transforming <span>buisnesses</span>
-                </h1>
+                <animated.h1 style={spring} ref={refSpring} className={css.title}>
+                    Digital <span>growth</span > transforming <span>buisnesses</span>
+                </animated.h1>
                 <div>
-                    <div className={css.circle}>
+                    <animated.div className={css.circle} style={spring1} ref={refSpring1}>
                         <div><Link to='/portfolio'>view <span>project</span></Link></div>
                         <BsArrowUpRight />
-                    </div>
-                    <div className={css.noncircle}>
+                    </animated.div>
+                    <animated.div className={css.noncircle} style={spring} ref={refSpring}>
                         <div></div>
                         <p>
                             Our digital agency specializes in helping
@@ -76,7 +123,7 @@ const Home = ({handleTop}) => {
                             digital landscape. From website design and development 
                             to digital marketing.
                         </p>
-                    </div>
+                    </animated.div>
                 </div>
             </div>
         </section>
@@ -84,15 +131,15 @@ const Home = ({handleTop}) => {
         <section className={css.cando}>
             <div className={css.candoDescWrapper}>
                 <div className={css.desc}>
-                    <div>Services</div>
-                    <h2>
+                    <animated.div style={springAnimated} ref={ref}>Services</animated.div>
+                    <animated.h2 style={springAnimated1} ref={ref1}>
                         What can we do for your needs.
-                    </h2>
-                    <p>
+                    </animated.h2>
+                    <animated.p style={springAnimated2} ref={ref2}>
                         Sugary sweet Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Placeat dolore ex repudiandae, quis dolor provident voluptatibus!
                         Optio, quidem nesciunt.
-                    </p>
+                    </animated.p>
                 </div>
                 <div>
                     <Botton />
@@ -100,7 +147,7 @@ const Home = ({handleTop}) => {
             </div>
 
             <div className={css.serviceWrapper}>
-                <div className={css.productWrapper}>
+                <animated.div style={springAnimated3} ref={ref3} className={css.productWrapper}>
                     <Smallbotton arrow={{transform: 'scale(.9)'}} extraStyle={{position : 'absolute', top: '3rem', right: '2rem'}} />
                     <div className={`product1 ${css.product}`}>
                         <div className={css.iconWr}>
@@ -118,9 +165,9 @@ const Home = ({handleTop}) => {
                         </div>
                         <div className={css.empty}></div>
                     </div>
-                </div>
+                </animated.div>
                 
-                <div className={css.productWrapper}>
+                <animated.div style={springAnimated4} ref={ref4} className={css.productWrapper}>
                     <Smallbotton arrow={{transform: 'scale(.9)'}} extraStyle={{position : 'absolute', top: '3rem', right: '2rem'}} />
                     <div className={`product1 ${css.product}`}>
                         <div className={css.iconWr}>
@@ -138,8 +185,8 @@ const Home = ({handleTop}) => {
                         </div>
                         <div className={css.empty}></div>
                     </div>
-                </div>
-                <div className={css.productWrapper}>
+                </animated.div>
+                <animated.div style={springAnimated5} ref={ref5} className={css.productWrapper}>
                     <Smallbotton arrow={{transform: 'scale(.9)'}} extraStyle={{position : 'absolute', top: '3rem', right: '2rem'}} />
                     <div className={`product1 ${css.product}`}>
                         <div className={css.iconWr}>
@@ -157,14 +204,14 @@ const Home = ({handleTop}) => {
                         </div>
                         <div className={css.empty}></div>
                     </div>
-                </div>
+                </animated.div>
             </div>
         </section>
 
         <CompleteSolu />
 
         <section className={css.recentwork}>
-            <div className={css.headtitle}>portfolio <span>my recent work list</span></div>
+            <animated.div style={springAnimatedd} ref={reff} className={css.headtitle}>portfolio <animated.span style={springAnimated11} ref={ref11}>my recent work list</animated.span></animated.div>
             <RecentWorks 
                 image1={image1}
                 image2={image2}
@@ -189,19 +236,19 @@ const Home = ({handleTop}) => {
         <CustomerSay />
 
         <section className={css.profteam}>
-            <div className={css.headtitle}>
-                team <span>our professional team</span>
-            </div>
+            <animated.div style={springAnimated33} ref={ref33} className={css.headtitle}>
+                team <animated.span style={springAnimated44} ref={ref44}>our professional team</animated.span>
+            </animated.div>
             <Team 
                 image1={team1} image2={team2} image3={team3} image4={team4}
                 name1={'Albert Wick'} name2={'Andrew Nikos'} name3={'katy Wilson'} name4={'Aya Nikola'}
                 job1={'UX/UI Designer'} job2={'IOS Developer'} job3={'Web Developer'} job4={'Digital Marketer'}
             />
-            <div className={css.clientnumber}>
+            <animated.div style={springAnimated6} ref={ref6} className={css.clientnumber}>
                 150+ clients we are building strong relationship
-            </div>
+            </animated.div>
 
-            <div className={css.awardWrapper}>
+            <animated.div style={springAnimated55} ref={ref55} className={css.awardWrapper}>
                 <div className={css.awards}>
                     <img src={logo1} alt="" className={css.award} />
                 </div>
@@ -217,15 +264,15 @@ const Home = ({handleTop}) => {
                 <div className={css.awards}>
                     <img src={logo6} alt="" className={css.award} />
                 </div>
-            </div>
+            </animated.div>
         </section>
         
         <Achievement />
 
         <section className={css.recentBlogs}>
-            <div className={css.headtitle}>
-                blog <span>our recent blogs</span>
-            </div>
+            <animated.div style={springAnimated7} ref={ref7} className={css.headtitle}>
+                blog <animated.span style={springAnimated8} ref={ref8}>our recent blogs</animated.span>
+            </animated.div>
             <RecentBlogs 
                 image1={blogImage1} image2={blogImage2} image3={blogImage3}
                 field1={'development'} field2={'UX design'} field3={'work process'}

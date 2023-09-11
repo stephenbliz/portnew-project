@@ -3,6 +3,8 @@ import css from './contact.module.css';
 import { useState } from 'react';
 import image1 from '../assets/myPhoto.jpg';
 import {MdArrowRightAlt} from 'react-icons/md';
+import useAnimate from './useAnimate';
+import { animated } from '@react-spring/web';
 
 const Contact = () => {
     const [feedback, setFeedback] = useState({
@@ -26,19 +28,38 @@ const Contact = () => {
 
     const paragraph = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolore, corrupti assumenda earum itaque odio! Voluptates, illo quasi maxime aspernatur at debitis ipsa non nemo. Consequatur distinctio quod harum voluptas.';
 
+    const {
+        ref,
+        reff,
+        ref1,
+        ref11,
+        ref2,
+        ref22,
+        ref5,
+        refImage,
+        springImage,
+        springAnimated,
+        springAnimated1,
+        springAnimated2,
+        springAnimated5,
+        springAnimatedd,
+        springAnimated11,
+        springAnimated22,
+    } = useAnimate();
+
     return (
         <section className={css.container}>
             <LinkIndicator text1={'Home'} text2={'Contact'}/>
             <section className={css.formWrapper}>
                 <div className={css.descWrp}>
-                    <h2>feel free to message with us</h2>
-                    <p>
+                    <animated.h2 style={springAnimated} ref={ref}>feel free to message with us</animated.h2>
+                    <animated.p style={springAnimated1} ref={ref1}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Iure assumenda mollitia eum. Odit illo optio tempora quia
                         perferendis perspiciatis ab veniam soluta, quam unde in! 
                         Labore, tempora voluptatum. Tenetur, dolore.
-                    </p>
-                    <div className={css.address}>
+                    </animated.p>
+                    <animated.div style={springAnimated2} ref={ref2} className={css.address}>
                         <div className={css.contact}>
                             <div>Contact Details</div>
                             <div>portnew@gmail.com</div>
@@ -49,17 +70,17 @@ const Contact = () => {
                             <div>In New York, USA</div>
                             <div>Suvastu</div>
                         </div>
-                    </div>
-                    <div className={css.social}>
+                    </animated.div>
+                    <animated.div style={springAnimated22} ref={ref22} className={css.social}>
                         <div>Socials</div>
                         <div className={css.wrp}>
                             <div>Twitter</div>
                             <div>Dribble</div>
                             <div>Behance</div>
                         </div>
-                    </div>
+                    </animated.div>
                 </div>
-                <div className={css.detailWrp}>
+                <animated.div style={springImage} ref={refImage} className={css.detailWrp}>
                     <form className={css.form} onSubmit={(e)=> handleSubmit(e)}>
                         <div className={css.nameWrp}>
                             <div className={css.name}>
@@ -108,11 +129,11 @@ const Contact = () => {
                         </div>
                         <button type='submit'>Send Message</button>
                     </form>
-                </div>
+                </animated.div>
             </section>
 
             <section className={css.livechatContainer}>
-                <div className={css.livechatWrp}>
+                <animated.div style={springAnimatedd} ref={reff} className={css.livechatWrp}>
                     <div className={css.textWrp}>
                         <h2>Live Chat</h2>
                         <div>
@@ -130,22 +151,22 @@ const Contact = () => {
                             Start a conversation <MdArrowRightAlt className={css.icon}/>
                         </div>
                     </div>
-                </div>
+                </animated.div>
             </section>
 
             <section className={css.faqContainer}>
-                <div className={css.faqWrp}>
+                <animated.div style={springAnimated11} ref={ref11} className={css.faqWrp}>
                     <div className={css.title}>FAQs.</div>
                     <div className={css.faq}>The Role of Prototyping in UX Design?</div>
                     <div className={css.faq}>The Importance User Testing in UX Design?</div>
                     <div className={css.faq}>Creating Persona for Targeted UX Design?</div>
                     <div className={css.faq}>The Evolution of UX/UI Design A Brief History?</div>
-                </div>
-                <div className={css.ansWrp}>
+                </animated.div>
+                <animated.div style={springAnimated5} ref={ref5} className={css.ansWrp}>
                     <div className={css.title}>Ans.</div>
                     <p>{paragraph}</p>
                     <p>{paragraph}</p>
-                </div>
+                </animated.div>
             </section>
         </section>
     );
