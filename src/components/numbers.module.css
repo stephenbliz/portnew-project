@@ -2,7 +2,7 @@
     padding: 5rem 10% 0 10%;
     display: flex;
 }
-.numberwrapper{
+.numberwrapperParent{
     width: 25%;
     padding: 0 5%;
     border-right: .1rem solid var(--gray);
@@ -32,7 +32,7 @@
         display: flex;
         flex-wrap: wrap;
     }
-    .numberwrapper{
+    .numberwrapperParent{
         width: 50%;
         text-align: center;
         padding: 0 10%;

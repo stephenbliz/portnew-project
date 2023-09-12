@@ -4,9 +4,11 @@
     width: 100%;
     aspect-ratio: 1/0.45;  
 }
-
-.blogWrapper{
+.blogWrapperParent{
     width: 32%;
+}
+.blogWrapper{
+    width: 100%;
     position: relative;
     height: fit-content;
     border-radius: 1.5rem;
@@ -74,8 +76,10 @@
     .recentBlogContainer{
         flex-wrap: wrap;
     }
-    .blogWrapper{
+    .blogWrapperParent{
         width: 48%;
+    }
+    .blogWrapper{
         margin-bottom: 3rem;
     }
     .recentBlogContainer> :last-child{
@@ -85,7 +89,7 @@
 }
 
 @media screen and (max-width: 701px){
-    .blogWrapper{
+    .blogWrapperParent{
         width: 100%;
     }
 }

@@ -7,8 +7,11 @@
 .recentImageContainer> :nth-child(2){
     align-self: center;
 }
-.recentImageWrapper{
+.recentImageWrapperParent{
     width: 32%;
+}
+.recentImageWrapper{
+    width: 100%;
     aspect-ratio: 1/1.4;
 }
 .recentImage{
@@ -64,8 +67,10 @@
         flex-wrap: wrap;
         gap: 2rem;
     }
-    .recentImageWrapper{
+    .recentImageWrapperParent{
         width: 100%;
+    }
+    .recentImageWrapper{
         aspect-ratio: 1/1.3;
     }
     .recentImageContainer> :nth-child(2){

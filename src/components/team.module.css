@@ -1,10 +1,11 @@
 .teamcontainer{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 6rem;
 
 }
-.team{
+.teamcontainerDiv{
     width: 24%;
     aspect-ratio: 1/1.7;
 }
@@ -78,14 +79,14 @@
         display: flex;
         flex-wrap: wrap;
     }
-    .team{
+    .teamcontainerDiv{
         width: 47%;
         margin-bottom: 2rem;
     }
 }
 
 @media screen and (max-width: 481px){
-    .team{
+    .teamcontainerDiv{
         width: 100%;
     }
 }

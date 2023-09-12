@@ -87,7 +87,7 @@ const useAnimate = () => {
       })
 
       const spring = useSpring({
-        from: {opacity: inViewSpring && '0', translateY:inViewSpring && '100px'},
+        from: {opacity: inViewSpring && '0', translateY:inViewSpring && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
@@ -99,40 +99,40 @@ const useAnimate = () => {
       })
 
       const springImage = useSpring({
-        from: {opacity: inViewImage && '0', translateY: inViewImage && '150px'},
+        from: {opacity: inViewImage && '0', translateY: inViewImage && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springImage1 = useSpring({
-        from: {opacity: inViewImage1 && '0', translateY: inViewImage1 && '150px'},
+        from: {opacity: inViewImage1 && '0', translateY: inViewImage1 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springImage2 = useSpring({
-        from: {opacity: inViewImage2 && '0', translateY: inViewImage2 && '150px'},
+        from: {opacity: inViewImage2 && '0', translateY: inViewImage2 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
 
       const springAnimated = useSpring({
-        from: {opacity: inView && '0', translateY: inView && '100px'},
+        from: {opacity: inView && '0', translateY: inView && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springAnimatedd = useSpring({
-        from: {opacity: inVieww && '0', translateY: inVieww && '100px'},
+        from: {opacity: inVieww && '0', translateY: inVieww && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
 
       const springAnimated1 = useSpring({
-        from: {opacity: inView1  && '0', translateY: inView1  &&'100px'},
+        from: {opacity: inView1  && '0', translateY: inView1  &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 300
       })
       const springAnimated11 = useSpring({
-        from: {opacity: inView11 && '0', translateY: inView11 &&'100px'},
+        from: {opacity: inView11 && '0', translateY: inView11 &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 300
@@ -140,65 +140,65 @@ const useAnimate = () => {
 
       
       const springAnimated2 = useSpring({
-        from: {opacity: inView2 && '0', translateY: inView2 &&'100px'},
+        from: {opacity: inView2 && '0', translateY: inView2 &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 600
       })
       const springAnimated22 = useSpring({
-        from: {opacity: inView22 && '0', translateY: inView22 &&'100px'},
+        from: {opacity: inView22 && '0', translateY: inView22 &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 600
       })
 
       const springAnimated3 = useSpring({
-        from: {opacity: inView3 && '0', translateY: inView3 && '100px'},
+        from: {opacity: inView3 && '0', translateY: inView3 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springAnimated33 = useSpring({
-        from: {opacity: inView33 && '0', translateY: inView33 && '100px'},
+        from: {opacity: inView33 && '0', translateY: inView33 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springAnimated4 = useSpring({
-        from: {opacity: inView4 && '0', translateY: inView4 && '100px'},
+        from: {opacity: inView4 && '0', translateY: inView4 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 300
       })
       const springAnimated44 = useSpring({
-        from: {opacity: inView44 && '0', translateY: inView44 && '100px'},
+        from: {opacity: inView44 && '0', translateY: inView44 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 300
       })
       const springAnimated5 = useSpring({
-        from: {opacity: inView5 && '0', translateY: inView5 && '100px'},
+        from: {opacity: inView5 && '0', translateY: inView5 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 600
       })
       const springAnimated55 = useSpring({
-        from: {opacity: inView55 && '0', translateY: inView55 && '100px'},
+        from: {opacity: inView55 && '0', translateY: inView55 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 600
       })
       const springAnimated6 = useSpring({
-        from: {opacity: inView6 && '0', translateY: inView6 && '100px'},
+        from: {opacity: inView6 && '0', translateY: inView6 && '200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000}
       })
       const springAnimated7 = useSpring({
-        from: {opacity: inView7  && '0', translateY: inView7  &&'100px'},
+        from: {opacity: inView7  && '0', translateY: inView7  &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 300
       })
       const springAnimated8 = useSpring({
-        from: {opacity: inView8 && '0', translateY: inView8 &&'100px'},
+        from: {opacity: inView8 && '0', translateY: inView8 &&'200px'},
         to: {opacity: '1', translateY: '0'},
         config: {duration: 1000},
         delay: 600

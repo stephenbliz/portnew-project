@@ -44,8 +44,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.skills{
+.skillsparent{
     width: 45%;
+}
+.skills{
+    width: 100%;
     position: relative;
     margin-bottom: 3rem;
 }
@@ -97,18 +100,13 @@
     .skillImageWrp{
         top: -4rem;
     }
-    /* .value> div> span{
-        font-size: 1.6rem;
-    }
-    .circle{
-        font-size: 1.6rem;
-        padding: 15% 0;
-    } */
 }
 
 @media screen and (max-width: 481px){
-    .skills{
+    .skillsparent{
         width: 100%;
+    }
+    .skills{
         margin-bottom: 4rem;
     }
 }
