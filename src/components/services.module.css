@@ -13,9 +13,12 @@
 .processContainer> :last-child{
     align-self: center;
 }
-.processWrapper{
+.processWrapperParent{
     width: 23%;
 }
+/* .processWrapper{
+    width: 23%;
+} */
 .processWrapper> :first-child{
     margin-bottom: 1rem;
 }
@@ -132,7 +135,7 @@ a> :first-child> :first-child{
     .processContainer{
         flex-wrap: wrap;
     }
-    .processWrapper{
+    .processWrapperParent{
         width: 48%;
     }
 }
@@ -148,7 +151,7 @@ a> :first-child> :first-child{
 }
 
 @media screen and (max-width: 481px){
-    .processWrapper{
+    .processWrapperParent{
         width: 100%;
     }
 }

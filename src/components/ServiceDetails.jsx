@@ -9,11 +9,12 @@ import service2 from '../assets/service2.jpg';
 import {BsStars} from 'react-icons/bs';
 import useAnimate from './useAnimate';
 import { animated } from '@react-spring/web';
+import useAnimationArray from './useAnimationArray';
 
 
 const ServiceDetails = () => {
 
-    const serviceDetails = [
+    const servicedetails = [
         {name: 'Research', color: 'green', image: uiImage, mainDesc: 'Design sweet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci deserunt eos eligendi. Possimus facilis eveniet corrupti fuga quisquam dolorem odio? Asperiores veritatis earum minima nobis accusamus fuga dignissimos reiciendis ex.', 
             minorDesc: 'Our digital agency specializes in helping buisnesses of all sizes navigate the ever elvoving digital landscape. From website design and development to digital marketing.', 
             features: ['context', 'Wireframe', 'Test', 'Prototype'], id: 1 },
@@ -38,6 +39,8 @@ const ServiceDetails = () => {
         springAnimated2,
         springImage
     } = useAnimate()
+
+    const {refs, arraySprings} = useAnimationArray();
 
     
     return (
@@ -102,42 +105,48 @@ const ServiceDetails = () => {
             </section>
             <Slider text={"User Research"} icon={<BsStars className={css.stars}/>}/>
             <section className={css.servicedetailWrapper}>
-                {serviceDetails.map((servicedetail)=>(
-                    <div className={css.servicedetail} key={servicedetail.id}>
-                        <div className={css.imageSide}>
-                            <div className={css.servicedetailImgWrp}>
-                                <img src={servicedetail.image} alt="" className={css.servicedetailImg} />
+                {
+                    arraySprings.map((arraySpring, index)=>(
+                        <animated.div className={css.servicedetailParent} style={arraySpring} key={arraySpring[index]} ref={refs[index]}>
+                            {
+                                <div className={css.servicedetail} key={servicedetails[index].id}>
+                                <div className={css.imageSide}>
+                                    <div className={css.servicedetailImgWrp}>
+                                        <img src={servicedetails[index].image} alt="" className={css.servicedetailImg} />
+                                    </div>
+                                    <div className={css.listWrapper}>
+                                        <div>
+                                            <div className={servicedetails[index].color == 'green'? css.green : css.orange}></div>
+                                            <div>{servicedetails[index].features[0]}</div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div className={servicedetails[index].color == 'green'? css.green : css.orange}></div>
+                                            <div>{servicedetails[index].features[1]}</div>
+                                        </div>
+        
+                                        <div>
+                                            <div className={servicedetails[index].color == 'green'? css.green : css.orange}></div>
+                                            <div>{servicedetails[index].features[2]}</div>
+                                        </div>
+        
+                                        <div>
+                                            <div className={servicedetails[index].color == 'green'? css.green : css.orange}></div>
+                                            <div>{servicedetails[index].features[3]}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={css.textSide}>
+                                    <h2>{servicedetails[index].name}</h2>
+                                    <p>{servicedetails[index].mainDesc}</p>
+                                    <p>{servicedetails[index].minorDesc}</p>
+                                    <div></div>
+                                </div>
                             </div>
-                            <div className={css.listWrapper}>
-                                <div>
-                                    <div className={servicedetail.color == 'green'? css.green : css.orange}></div>
-                                    <div>{servicedetail.features[0]}</div>
-                                </div>
-                                
-                                <div>
-                                    <div className={servicedetail.color == 'green'? css.green : css.orange}></div>
-                                    <div>{servicedetail.features[1]}</div>
-                                </div>
-
-                                <div>
-                                    <div className={servicedetail.color == 'green'? css.green : css.orange}></div>
-                                    <div>{servicedetail.features[2]}</div>
-                                </div>
-
-                                <div>
-                                    <div className={servicedetail.color == 'green'? css.green : css.orange}></div>
-                                    <div>{servicedetail.features[3]}</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={css.textSide}>
-                            <h2>{servicedetail.name}</h2>
-                            <p>{servicedetail.mainDesc}</p>
-                            <p>{servicedetail.minorDesc}</p>
-                            <div></div>
-                        </div>
-                    </div>
-                ))}
+                            }
+                        </animated.div>
+                    ))
+                }
             </section>
         </section>
     );

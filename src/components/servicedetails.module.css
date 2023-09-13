@@ -72,6 +72,10 @@
     width: 90%;
     height: 80%;
     transform: rotate(10deg) translateY(-1rem);
+    transition: .5s;
+}
+.servicedetailImg:hover{
+    transform: rotate(0) translateY(0);
 }
 .listWrapper{
     width: 45%;
